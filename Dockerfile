@@ -10,6 +10,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app ./app
 COPY sql ./sql
-
-# Cloud Run listens on $PORT
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080}"]
+COPY run.py ./run.py
+CMD ["python", "run.py"]
