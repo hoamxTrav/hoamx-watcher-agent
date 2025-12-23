@@ -12,9 +12,8 @@ steps:
       - --image=${_IMAGE}
       - --region=us-central1
       - --platform=managed
-      - --allow-unauthenticated
+      - --no-allow-unauthenticated
 substitutions:
-  _IMAGE: us-central1-docker.pkg.dev/imperial-arcade-480315-c7/cloud-run-images/hoamx-watcher-agent
-:${SHORT_SHA}
+  _IMAGE: us-central1-docker.pkg.dev/imperial-arcade-480315-c7/cloud-run-images/hoamx-watcher-agent:${SHORT_SHA}
 images:
   - "${_IMAGE}"
