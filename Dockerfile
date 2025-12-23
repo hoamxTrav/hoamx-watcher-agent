@@ -12,4 +12,4 @@ COPY app ./app
 COPY sql ./sql
 
 # Cloud Run listens on $PORT
-CMD ["bash", "-lc", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080}"]
+CMD ["sh", "-lc", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080}"]
